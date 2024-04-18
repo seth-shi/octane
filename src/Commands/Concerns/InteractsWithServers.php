@@ -167,6 +167,10 @@ trait InteractsWithServers
      */
     public function getSubscribedSignals(): array
     {
+        if (windows_os()) {
+            return [];
+        }
+        
         return [SIGINT, SIGTERM, SIGHUP];
     }
 
