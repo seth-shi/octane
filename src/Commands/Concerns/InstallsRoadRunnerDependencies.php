@@ -177,7 +177,9 @@ trait InstallsRoadRunnerDependencies
             }
         });
 
-        chmod(base_path('rr'), 0755);
+        if (! windows_os()) {
+            chmod(base_path('rr'), 0755);
+        }
 
         $this->line('');
     }
