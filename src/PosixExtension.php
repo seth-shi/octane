@@ -14,7 +14,7 @@ class PosixExtension
         if (windows_os()) {
             return false;
         }
-        
+
         return posix_kill($processId, $signal);
     }
 }

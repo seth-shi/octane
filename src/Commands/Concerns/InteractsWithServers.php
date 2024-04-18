@@ -170,7 +170,7 @@ trait InteractsWithServers
         if (windows_os()) {
             return [];
         }
-        
+
         return [SIGINT, SIGTERM, SIGHUP];
     }
 
