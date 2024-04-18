@@ -11,6 +11,10 @@ class PosixExtension
      */
     public function kill(int $processId, int $signal)
     {
+        if (windows_os()) {
+            return false;
+        }
+        
         return posix_kill($processId, $signal);
     }
 }
